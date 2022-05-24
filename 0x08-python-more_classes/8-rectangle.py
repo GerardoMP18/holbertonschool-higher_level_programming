@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """Compare rectangles"""
 
-from unittest import result
-
 
 class Rectangle:
     """Creating of instantiation with width

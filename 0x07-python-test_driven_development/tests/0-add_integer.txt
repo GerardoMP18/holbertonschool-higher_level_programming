@@ -1,0 +1,80 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+--------------------------------------------------------
+|             Test Integers addition     		|
+--------------------------------------------------------
+Description:
+Function that allows you to add 2 integers
+
+Test of sum with number negative and number positive
+>>> add_integer(-6,5)
+-1
+
+Test of sum with float and number integer
+>>> add_integer(2.5,3)
+5
+
+Test of sum with operation sum in the function
+>>> add_integer(4+4,5+5)
+18
+
+Test of sum with number negative and number integer
+>>> add_integer(-4,-4)
+-8
+
+Test of sum with number zero
+>>> add_integer(0,0)
+0
+
+Test of sum with  number, letters and number integer
+>>> add_integer(4asd,5)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+Test of sum with string and number integer
+>>> add_integer("string",8)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+Test of sum with number integer and string
+>>> add_integer(8,"string")
+Traceback (most recent call last):
+    ...
+TypeError: b must be an integer
+
+Test of sum without adding value
+>>> add_integer()
+Traceback (most recent call last):
+    ...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
+Test of sum with float conversion of string and number integer
+>>> add_integer(float('hola'),int(4))
+Traceback (most recent call last):
+    ...
+ValueError: could not convert string to float: 'hola'
+
+Test of sum with list of number one and number negative
+>>> add_integer(list("1"),-4)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+Test of sum with list of number one and list of number two
+>>> add_integer(list("1"),list("2"))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+Test of sum with array and number positive
+>>> add_integer([4],2)
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+Test of sum with value positive infinite integer
+>>> add_integer(float('inf'))
+Traceback (most recent call last):
+    ...
+OverflowError: cannot convert float infinity to integer

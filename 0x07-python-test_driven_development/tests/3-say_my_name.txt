@@ -1,0 +1,62 @@
+Import say_my_name function
+        >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+--------------------------------------------------------
+|             Test Say my name                          |
+--------------------------------------------------------
+Description:
+Function for print two parameters
+
+Test sending with two parameter string
+	>>> say_my_name("Gerardo", "Marin")
+	My name is Gerardo Marin
+    
+Test sending with parameter of string and integer
+	>>> say_my_name("Gerardo", int(1))
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+Test sending with parameter of integer and string
+	>>> say_my_name(int(1), "Marin")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+Test sending empty parameters
+	>>> say_my_name()
+	Traceback (most recent call last):
+		...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Test sending with 3 parameter
+	>>> say_my_name("Gerardo","Marin", "Parra")
+	Traceback (most recent call last):
+		...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+Test sending with parameter of list with list
+	>>> say_my_name(list("Gerardo"),list("Marin"))
+	Traceback (most recent call last):
+        	...
+	TypeError: first_name must be a string
+
+Test sending with parameter of list with value string
+	>>> say_my_name(list("Gerardo"), "Marin")
+	Traceback (most recent call last):
+		...
+	TypeError: first_name must be a string
+
+Test sending string and float parameters
+	>>> say_my_name("Gerardo", float(2.5))
+	Traceback (most recent call last):
+		...
+	TypeError: last_name must be a string
+
+Result printing tests with ascci
+	>>> valor1 = ord('A')
+	>>> valor2 = ord('Z')   
+	>>> valor11 = chr(valor1)
+	>>> valor12 = chr(valor2)
+	>>> say_my_name(valor11, valor12)
+    	My name is A Z

@@ -1,0 +1,46 @@
+Import text_indentation function
+        >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+--------------------------------------------------------
+|             Text indentation                         |
+--------------------------------------------------------
+Description:
+Function that prints a text with 2 new lines after each
+of these characters: ., ? and :
+
+Test with value integer
+	>>> text_indentation(100)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+Test with value string with characters .:?
+	>>> text_indentation("Hola.?:")
+	Hola.
+	<BLANKLINE>	
+	?
+	<BLANKLINE>
+	:
+	<BLANKLINE>
+
+Test with number negative
+	>>> text_indentation(-1)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+Test with empty parameter
+	>>> text_indentation()
+	Traceback (most recent call last):
+		...
+	TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Test no space
+	>>> text_indentation("Hola.asd?asd:asd")
+	Hola.
+	<BLANKLINE>
+	asd?
+	<BLANKLINE>
+	asd:
+	<BLANKLINE>
+	asd

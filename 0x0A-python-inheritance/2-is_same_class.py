@@ -6,4 +6,7 @@ of the specified class
 
 
 def is_same_class(obj, a_class):
+    """
+    Function to return if it is a class instance
+    """
     return issubclass(a_class, type(obj))

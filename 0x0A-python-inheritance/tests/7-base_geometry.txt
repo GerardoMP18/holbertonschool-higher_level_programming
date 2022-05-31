@@ -86,3 +86,8 @@ Test for task 7
 	Traceback (most recent call last):
 		...
 	SyntaxError: invalid syntax
+
+	>>> bg.integer_validator("list", (7, 8, 9))
+	Traceback (most recent call last):
+		...
+	TypeError: list must be an integer

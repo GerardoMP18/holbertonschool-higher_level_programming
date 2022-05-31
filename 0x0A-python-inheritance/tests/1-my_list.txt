@@ -17,6 +17,9 @@ Tests that allows you to add and print
 	>>> print(my_list)
 	[1, 10, 2, 5, 6]
 
+	>>> my_list.print_sorted()
+	[1, 2, 5, 6, 10]
+
 Tests that allow to add negative numbers
 and print in an orderly way
 	>>> my_list = MyList()
@@ -43,3 +46,5 @@ Tests without parameters
 	>>> my_list = MyList()
 	>>> my_list.print_sorted()
 	[]
+
+

@@ -76,3 +76,8 @@ Test for task 7
 	Traceback (most recent call last):
 		...
 	TypeError: str must be an integer
+
+	>>> bg.integer_validator("String", {1, 2, 3})
+	Traceback (most recent call last):
+		...
+	TypeError: String must be an integer

@@ -1,0 +1,45 @@
+Import the file
+	>>> MyList = __import__('1-my_list').MyList
+
+--------------------------------------------------------
+|             Test My list                		|
+--------------------------------------------------------
+Description:
+Function for sorted the list
+
+Tests that allows you to add and print
+	>>> my_list = MyList()
+	>>> my_list.append(1)
+	>>> my_list.append(10)
+	>>> my_list.append(2)
+	>>> my_list.append(5)
+	>>> my_list.append(6)
+	>>> print(my_list)
+	[1, 10, 2, 5, 6]
+
+Tests that allow to add negative numbers
+and print in an orderly way
+	>>> my_list = MyList()
+	>>> my_list.append(-1)
+	>>> my_list.append(-4)
+	>>> my_list.append(-2)
+	>>> my_list.append(-3)
+	>>> my_list.append(-5)
+ 	>>> my_list.print_sorted()
+	[-5, -4, -3, -2, -1]
+
+Tests that allow you to add negative numbers, float and
+positive numbers and print in an orderly manner
+	>>> my_list = MyList()
+	>>> my_list.append(1.5)
+	>>> my_list.append(-4)
+	>>> my_list.append(4)
+	>>> my_list.append(-3)
+	>>> my_list.append(1)
+	>>> my_list.print_sorted()
+	[-4, -3, 1, 1.5, 4]
+
+Tests without parameters
+	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]

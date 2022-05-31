@@ -72,3 +72,7 @@ Test for task 7
 		...
 	TypeError: integer_validator() missing 1 required positional argument: 'value'
 	
+	>>> bg.integer_validator("str", None)
+	Traceback (most recent call last):
+		...
+	TypeError: str must be an integer

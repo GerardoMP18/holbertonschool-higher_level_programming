@@ -1,0 +1,74 @@
+Import the class BaseGeometry
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+--------------------------------------------------------
+|             Test Integer validator	   		|
+--------------------------------------------------------
+Description:
+Function for validator number integers
+
+Test for task 7
+
+	>>> bg = BaseGeometry()
+        >>> bg.area()
+	Traceback (most recent call last):
+		...
+	Exception: area() is not implemented
+
+	>>> bg.area(1, 2)
+	Traceback (most recent call last):
+		...
+	TypeError: area() takes 1 positional argument but 3 were given
+
+	>>> bg.integer_validator("Integer",2)
+	
+	>>> bg.integer_validator("Integer", -2)
+	Traceback (most recent call last):
+		...
+	ValueError: Integer must be greater than 0
+
+	>>> bg.integer_validator("Float", 2.8)
+	Traceback (most recent call last):
+		...
+	TypeError: Float must be an integer
+
+	>>> bg.integer_validator("Float", -2.8)
+	Traceback (most recent call last):
+		...
+	TypeError: Float must be an integer
+
+	>>> bg.integer_validator("Integer", 0)
+	Traceback (most recent call last):
+		...
+	ValueError: Integer must be greater than 0
+
+	>>> bg.integer_validator("Boolean", True)
+	Traceback (most recent call last):
+		...
+	TypeError: Boolean must be an integer
+
+	>>> bg.integer_validator("String", "Raaa")
+	Traceback (most recent call last):
+		...
+	TypeError: String must be an integer
+
+	>>> bg.integer_validator("List", [2,5])
+	Traceback (most recent call last):
+		...
+	TypeError: List must be an integer
+
+	>>> bg.integer_validator("Integer", 2, 3)
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() takes 3 positional arguments but 4 were given
+
+	>>> bg.integer_validator()
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+	>>> bg.integer_validator("Gerardo")
+	Traceback (most recent call last):
+		...
+	TypeError: integer_validator() missing 1 required positional argument: 'value'
+	

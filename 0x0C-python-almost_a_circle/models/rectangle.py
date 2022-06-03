@@ -5,6 +5,9 @@
 - Area first
 - Display #0
 - __str__
+- Display #1
+- Update #0
+- Update #1
 """
 
 
@@ -81,7 +84,11 @@ class Rectangle(Base):
     with character #
     """
     def display(self):
+        for i in range(self.__y):
+            print("\n", end="")
         for a in range(self.__height):
+            for j in range(self.__x):
+                print(" ", end="")
             for b in range(self.__width):
                 print("#", end="")
             print()
@@ -93,3 +100,17 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                                                         self.__y, self.__width,
                                                         self.__height))
+
+    """
+    Method that allows us to perform the update that assigns
+    the argument to each attribute
+    """
+    def update(self, *args, **kwargs):
+        numArgs = len(args)
+        arguments = ['id', 'width', 'height', 'x', 'y']
+        if (numArgs != 0 and args is not None):
+            for index in range(numArgs):
+                setattr(self, arguments[index], args[index])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)

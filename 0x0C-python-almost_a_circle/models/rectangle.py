@@ -8,6 +8,7 @@
 - Display #1
 - Update #0
 - Update #1
+- Rectangle instance to dictionary representation
 """
 
 
@@ -114,3 +115,11 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    """
+    Representation of dictionary of a rectangle
+    """
+    def to_dictionary(self):
+        return {'id': self.id, 'width': self.__width,
+                'height': self.__height, 'x': self.__x,
+                'y': self.__y}

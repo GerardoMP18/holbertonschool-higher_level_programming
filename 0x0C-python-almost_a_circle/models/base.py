@@ -1,7 +1,10 @@
 #!/usr/bin/python3
 """
-Base class
+- Base class
+- Dictionary to JSON string
+- JSON string to file
 """
+import json
 
 
 class Base:
@@ -17,3 +20,26 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    """
+    Return the JSON string representation of list_dictionaries
+    """
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        return (json.dumps(list_dictionaries))
+
+    """
+    JSON string representation of list_objs in a file
+    """
+    @classmethod
+    def save_to_file(cls, list_objs):
+        new_list = []
+        if list_objs:
+            for i in list_objs:
+                dictionary = i.to_dictionary()
+                new_list.append(dictionary)
+        filename = cls.__name__ + ".json"
+        with open(filename, mode="w", encoding="utf-8")as myFile:
+            myFile.write(cls.to_json_string(new_list))

@@ -74,17 +74,17 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
         self.__y = value
 
-    """
-    Method that returns the area of the rectangle
-    """
     def area(self):
+        """
+        Method that returns the area of the rectangle
+        """
         return self.__width * self.__height
 
-    """
-    Method that prints in stdout the rectangle instance
-    with character #
-    """
     def display(self):
+        """
+        Method that prints in stdout the rectangle instance
+        with character #
+        """
         for i in range(self.__y):
             print("\n", end="")
         for a in range(self.__height):
@@ -94,19 +94,19 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
-    """
-    Return message
-    """
     def __str__(self):
+        """
+        Return message
+        """
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                                                         self.__y, self.__width,
                                                         self.__height))
 
-    """
-    Method that allows us to perform the update that assigns
-    the argument to each attribute
-    """
     def update(self, *args, **kwargs):
+        """
+        Method that allows us to perform the update that assigns
+        the argument to each attribute
+        """
         numArgs = len(args)
         arguments = ['id', 'width', 'height', 'x', 'y']
         if (numArgs != 0 and args is not None):
@@ -116,10 +116,10 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-    """
-    Representation of dictionary of a rectangle
-    """
     def to_dictionary(self):
+        """
+        Representation of dictionary of a rectangle
+        """
         return {'id': self.id, 'width': self.__width,
                 'height': self.__height, 'x': self.__x,
                 'y': self.__y}

@@ -27,11 +27,11 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-    """
-    Method that allows us to perform the update assigned to us
-    the argument of each attribute and keywords
-    """
     def update(self, *args, **kwargs):
+        """
+        Method that allows us to perform the update assigned to us
+        the argument of each attribute and keywords
+        """
         numArgs = len(args)
         arguments = ['id', 'size', 'x', 'y']
         if (numArgs != 0 and args is not None):
@@ -41,9 +41,9 @@ class Square(Rectangle):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-    """
-    Representation of dictionary of a square
-    """
     def to_dictionary(self):
+        """
+        Representation of dictionary of a square
+        """
         return {'id': self.id, 'size': self.width,
                 'x': self.x, 'y': self.y}

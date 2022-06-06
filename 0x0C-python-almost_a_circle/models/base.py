@@ -63,7 +63,7 @@ class Base:
         square = cls.__name__
         if dictionary:
             if(rectangle == 'Rectangle'):
-                dummy = cls(1, 2, 3, 4)
+                dummy = cls(1, 2)
             if(square == 'Square'):
                 dummy = cls(5)
             dummy.update(**dictionary)

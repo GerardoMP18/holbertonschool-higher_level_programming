@@ -85,3 +85,34 @@ class Base:
                 return new
         except Exception:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """
+        JSON string representation of list_objs in a file
+        """
+        new_list = []
+        if list_objs:
+            for i in list_objs:
+                dictionary = i.to_dictionary()
+                new_list.append(dictionary)
+        filename = cls.__name__ + ".csv"
+        with open(filename, mode="w", encoding="utf-8")as myFile:
+            myFile.write(cls.to_json_string(new_list))
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        returns a list of instances
+        """
+        filename = cls.__name__ + ".csv"
+        try:
+            with open(filename, mode="r", encoding="utf-8") as myFile:
+                readFile = myFile.read()
+                list_dictionary = cls.from_json_string(readFile)
+                new = []
+                for items in list_dictionary:
+                    new.append(cls.create(**items))
+                return new
+        except Exception:
+            return []

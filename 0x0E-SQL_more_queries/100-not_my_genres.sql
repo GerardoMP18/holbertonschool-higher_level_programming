@@ -7,5 +7,5 @@ WHERE TG.name NOT IN (SELECT TG.name
 		      ON TG.id = TSG.genre_id
 		      INNER JOIN tv_shows TS
 		      ON TSG.show_id = TS.id
-		      WHERE TS.title = "Dexter"
-ORDER BY TG.name DESC)
+		      WHERE TS.title = "Dexter")
+ORDER BY TG.name DESC

@@ -5,8 +5,7 @@ const myArgv = process.argv[2];
 
 if (isNaN(myArgv)) {
   console.log('Missing size')
-}
-else {
+} else {
   const convertInteger = Math.floor(myArgv);
  
   for (let i = 0; i < convertInteger; i++) {

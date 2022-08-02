@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Creation of new methods charPrint that prints the recatngles using the character c o x
+// Creation of new methods charPrint that prints the recatngles using the character c o x ....
 
 const newSquare = require('./5-square');
 

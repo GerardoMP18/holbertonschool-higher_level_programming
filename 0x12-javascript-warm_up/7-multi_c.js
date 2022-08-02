@@ -8,7 +8,7 @@ if (isNaN(myArgv)) {
 } else {
   const convertInteger = Math.floor(myArgv);
   
-  for (let i = 0; i < convertInteger; i++) {
+  for (let x = 0; x < convertInteger; x++) {
     console.log('C is fun');
   }
 }

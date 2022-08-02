@@ -12,7 +12,7 @@ module.exports = class Rectangle {
     }
   }
 
-  //creation of method
+  // Creation of method
   print () {
     const character = 'X';
     for (let i = 0; i < this.height; i++) {

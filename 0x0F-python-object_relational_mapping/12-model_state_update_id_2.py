@@ -30,6 +30,13 @@ if __name__ == "__main__":
             }
         )
 
+    """
+    ------SQL------
+    UPDATE states
+    SET name = "New Mexico"
+    WHERE id = 2
+    """
+
     # Update with Object
     # state = session.query(State). \
     #   filter(State.id == 2).first()
